@@ -1,0 +1,183 @@
+\documentclass[]{article}
+\usepackage[cm]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+
+\hypersetup{breaklinks=true,%
+pagecolor=white,%
+colorlinks=true,%
+linkcolor=cyan,%
+urlcolor=MyDarkBlue}
+
+\definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting parameters  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength{\tabin}
+\setlength{\tabin}{1em}
+\newlength{\secsep}
+\setlength{\secsep}{0.1cm}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+\definecolor{contactgray}{gray}{0.4}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Template Definitions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-6pt} \hrulefill \\ \vspace*{-15pt}}
+\newcommand{\name}[1]{\begin{center}\textsc{\Huge#1}\\\end{center}}
+\newcommand{\program}[1]{\begin{center}\textsc{#1}\end{center}}
+\newcommand{\contact}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
+\newcommand{\contactnumber}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
+
+\newenvironment{tabbedsection}[1]{
+  \begin{list}{}{
+      \setlength{\itemsep}{0pt}
+      \setlength{\labelsep}{0pt}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\leftmargin}{\tabin}
+      \setlength{\rightmargin}{\tabin}
+      \setlength{\listparindent}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\partopsep}{0pt}
+      \setlength{\topsep}{#1}
+    }
+  \item[]
+}{\end{list}}
+
+\newenvironment{nospacetabbing}{
+    \begin{tabbing}
+}{\end{tabbing}\vspace{-1.2em}}
+
+\newenvironment{resume_header}{}{\vspace{0pt}}
+
+
+\newenvironment{resume_section}[1]{
+  \filbreak
+  \vspace{2\secsep}
+  \textsc{\large#1}
+  \lineunder
+  \begin{tabbedsection}{\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{resume_subsection}[2][]{
+  \textbf{#2} \hfill {\footnotesize #1} \hspace{2em}
+  \begin{tabbedsection}{0.5\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{subitems}{
+  \renewcommand{\labelitemi}{-}
+  \begin{itemize}
+      \setlength{\labelsep}{1em}
+}{\end{itemize}}
+
+\newenvironment{resume_employer}[4]{
+  \vspace{\secsep}
+  \textbf{#1} \\ 
+  \indent {\small #2} \hfill {\footnotesize#3 (#4)}
+  \begin{tabbedsection}{0pt}
+  \begin{subitems}
+}{\end{subitems}\end{tabbedsection}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{resume_header}
+\name{Alex Statham}
+\program{Computer science and AI}
+\contact{alex.staham1998@gmail.com}
+\contactnumber{+447490973388         astatham.com}     
+\end{resume_header}
+
+\begin{resume_section}{About Me}
+  \begin{nospacetabbing}
+
+  \textbf{Technical Skills}  \= Python, Java, Unix, GO, mysql, C#,  \LaTeX\\*
+  \textbf{Interests} \> Machine learning,  Data analytics and visualisation,  Web scraping, Automation \\*
+  \end{nospacetabbing}
+
+\end{resume_section}
+
+\begin{resume_section}{Work Experience}
+	\begin{resume_employer}{Waitrose}{Multi-trained partner}{(October 2015 - May 2018)}{}
+    \item Cross-trained to other roles to improve flexibility whilst showing the ability to quickly learn new skills.
+    \item Interacted with customers to bring high quality customer service.
+    \item Worked in small teams in high pressure situations to complete tasks to a high standard.
+  \end{resume_employer}
+  
+  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{(November 2018 - Current)}{}
+    \item Worked with clients to bring robust and reliable software.
+    \item Showed ability to follow strict and specific guidelines from clients.
+    \item Created custom webscrapers and data visualisations to independent businesses to help their growth.
+    \item Showed ability to perform to a deadline.
+  \end{resume_employer}
+\end{resume_section}
+
+
+\begin{resume_section}{Competitions and Personal Projects}
+  \begin{resume_subsection}[(November 2018 & 2019)]{Hack Sussex}
+  \begin{subitems}
+    \item Worked with prestigious companies such as Rolls Royce to develop their product.
+    \item Worked with multiple different pieces of new hardware including Raspberry Pi's and Arduinos to create a machine vision program - showing the ability to pick up new technologies.
+    \item Learnt to work in a team environment, nurturing time and asset management skills.
+    \item Had problem solving and critical thinking skills tested when working in a time pressure environment.
+    \item Won an award for best use of hardware from the machine vision project.
+    \item Lead a team to create a game using unity and C#. Created a beat detection algorithm and Spotify api integration into the game. 
+    \item Won the award for most atmospheric project from a beat detection gamemode. 
+    \end{subitems}
+  \end{resume_subsection}
+
+    \begin{resume_subsection}[(December 2017 - Current)]{Data science blog}
+    \begin{subitems}
+        \item Wrote multiple articles along with data visualisations about interesting topics.
+        \item Dived into machine learning with Tensorflow using large datasets.
+        \item Learned how to do webscrapes for websites with and without javascript elements.
+        \item Improved writing skills by continuing to update the blog.
+        \item Learned how to code aesthetically pleasing visualisations in seaborn and matplotlib.
+    \end{subitems}
+  \end{resume_subsection}
+  
+
+\begin{resume_section}{Education}
+  \begin{resume_subsection}[Brighton (2018-Present)]{University of Sussex}
+    \begin{subitems}
+      \item Computer science and AI (With a year in industry)
+      \item Achieved a first class degree in year 1.
+    \end{subitems}
+  \end{resume_subsection}
+  
+  
+  \begin{resume_subsection}[Isle of Wight (2015-2018)]{Cowes Enterprise College Sixth Form}
+    \begin{subitems}
+      \item A-levels in: Psychology, maths and chemistry
+      \item Results of: B, B, B
+     \end{subitems}
+  \end{resume_subsection}
+\end{resume_section}
+
+ \begin{resume_section}{Hobbies}
+	\begin{subitems}
+	 \item Snowboarding has been a great passion of mine for a few years, it has given me a break from studies as well as a creative outlet and a way to challenge myself.
+	 \item Travelling to multiple places throughout the world has opened my eyes to not only new cultures but the joy for overcoming challenges and achieving goals even when seemingly impossible.
+    \end{subitems}
+  \end{resume_subsection}
+\end{resume_section}
+    
+	
+
+
+\end{document}! LaTeX Error: \begin{list} on input line 129 ended by \end{document}.See the LaTeX manual or LaTeX Companion for explanation.Type H <return> for immediate help.... \end{document}
