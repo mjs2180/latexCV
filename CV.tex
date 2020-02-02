@@ -1,20 +1,13 @@
-\documentclass[]{article}
+\documentclass[a4paper]{article}
 \usepackage[cm]{fullpage}
 \usepackage{color}
-\usepackage{hyperref}
-
-\hypersetup{breaklinks=true,%
-pagecolor=white,%
-colorlinks=true,%
-linkcolor=cyan,%
-urlcolor=MyDarkBlue}
 
 \definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Formatting parameters  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\addtolength{\topmargin}{0in}
 \newlength{\tabin}
 \setlength{\tabin}{1em}
 \newlength{\secsep}
@@ -75,12 +68,6 @@ urlcolor=MyDarkBlue}
   \begin{tabbedsection}{0.5\secsep}
 }{\end{tabbedsection}}
 
-\newenvironment{subitems}{
-  \renewcommand{\labelitemi}{-}
-  \begin{itemize}
-      \setlength{\labelsep}{1em}
-}{\end{itemize}}
-
 \newenvironment{resume_employer}[4]{
   \vspace{\secsep}
   \textbf{#1} \\ 
@@ -88,6 +75,12 @@ urlcolor=MyDarkBlue}
   \begin{tabbedsection}{0pt}
   \begin{subitems}
 }{\end{subitems}\end{tabbedsection}}
+
+\newenvironment{subitems}{
+  \renewcommand{\labelitemi}{-}
+  \begin{itemize}
+      \setlength{\labelsep}{1em}
+}{\end{itemize}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,89 +91,77 @@ urlcolor=MyDarkBlue}
 
 \begin{resume_header}
 \name{Alex Statham}
-\program{Computer science and AI}
-\contact{$\bullet$ alex.staham1998@gmail.com           $\bullet$ +447490973388 }
-\contactnumber{$\bullet$ astatham.com}     
+\contact{alex.staham1998@gmail.com  $\bullet$ +447490973388 $\bullet$ astatham.com}
 \end{resume_header}
 
 \begin{resume_section}{About Me}
   \begin{nospacetabbing}
-
-  \textbf{Technical Skills}  \= Python, Java, Unix, GO, mysql, C#,  \LaTeX\\*
+  \textbf{Interests:}  \= Machine learning,  Data acquisition, analytics and visualisation, DevOps Automation \\*
+  \textbf{Technical Skills:}  \= Python, Java, Linux, Golang, mysql, C\#,  \LaTeX\\*
   \end{nospacetabbing}
-
 \end{resume_section}
 
 \begin{resume_section}{Personal Statement}
-Why am I seeing that Ad? That simple question led  me to dive into the world of data analytics, machine learning and  artificial intelligence. We have more capabilities and power to determine the content people see, in real-time, than ever before. The question I was left with was how do we do it ethically and securely. I'm passionate about data, machine learning and the algorithms that only now are we able to fully realise.
+  \textbf{Why am I seeing that Ad?} That simple question led  me to dive into the world of data analytics, machine learning and  artificial intelligence. We have more capabilities and power to determine the content people see, in real-time, than ever before. The question I was left with was how do we do it ethically and securely. I'm passionate about data, machine learning and the algorithms that only now are we able to fully realise.
 \end{resume_section}
 
 \begin{resume_section}{Work Experience}
-	\begin{resume_employer}{Waitrose}{Multi-trained partner}{(October 2015 - May 2018)}{}
-    \item Cross-trained to other roles to improve flexibility whilst showing the ability to quickly learn new skills.
-    \item Interacted with customers to bring high quality customer service.
-    \item Worked in small teams in high pressure situations to complete tasks to a high standard.
+  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{}{November 2018 - Current}
+    \item Develop robust and reliable software for multiple clients.
+    \item Created custom data acquisition and  visualisations to clients to help their growth.
+    \item Delivered against strict and specific guidelines against a deadline.
   \end{resume_employer}
   
-  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{(November 2018 - Current)}{}
-    \item Worked with clients to bring robust and reliable software.
-    \item Showed ability to follow strict and specific guidelines from clients.
-    \item Created custom webscrapers and data visualisations to independent businesses to help their growth.
-    \item Showed ability to perform to a deadline.
+  \begin{resume_employer}{Waitrose \& Partners}{Multi-trained partner}{}{October 2015 - May 2018}
+    \item Demonstrated flexibility and adaptability by learning and covering multiple roles.
+    \item Interacted with customers to provide high quality customer service.
+    \item Worked in small teams in high pressure situations to complete tasks to a high standard.
   \end{resume_employer}
 \end{resume_section}
 
-
 \begin{resume_section}{Competitions and Personal Projects}
-  \begin{resume_subsection}[(November 2018 & 2019)]{Hack Sussex}
-  \begin{subitems}
-    \item Worked with prestigious companies such as Rolls Royce to develop their product.
-    \item Worked with multiple different pieces of new hardware including Raspberry Pi's and Arduinos to create a machine vision program - showing the ability to pick up new technologies.
-    \item Learnt to work in a team environment, nurturing time and asset management skills.
-    \item Had problem solving and critical thinking skills tested when working in a time pressure environment.
+  \begin{resume_subsection}[(November 2018 \& 2019)]{Hack Sussex}
+    \begin{subitems}
+    \item Collaborated with Rolls Royce engineers to develop immersive features, using machine vision mapping techniques, for fibre optic vehicle technology. 
+    \item Utilised my critical thinking and problem solving skills, in a time constrained environment.
+    \item Required me to quick adapt to new hardware including Raspberry Pi's and Arduinos.
+    \item Worked in a team environment, optimsing time and asset management skills.
     \item Won an award for best use of hardware from the machine vision project.
-    \item Lead a team to create a game using unity and C#. Created a beat detection algorithm and Spotify api integration into the game. 
-    \item Won the award for most atmospheric project from a beat detection gamemode. 
+    \item Lead a team to create a game using Unity and C\# with unique beat detection algorithm.
+    \item Won the award for most atmospheric project based on the beat detection game mode using Spotify APIs.
     \end{subitems}
   \end{resume_subsection}
 
     \begin{resume_subsection}[(December 2017 - Current)]{Data science blog}
     \begin{subitems}
-        \item Wrote multiple articles along with data visualisations about interesting topics.
-        \item Dived into machine learning with Tensorflow using large datasets.
-        \item Learned how to do webscrapes for websites with and without javascript elements.
+        \item Wrote multiple articles along with data visualisations to share my learning.
+        \item Explored machine learning with Tensorflow using large datasets.
         \item Improved writing skills by continuing to update the blog.
-        \item Learned how to code aesthetically pleasing visualisations in seaborn and matplotlib.
+        \item Developed data aqusition skills for Internet source, e.g. webscraping.
+        \item Experience of developing aesthetically pleasing visualisations in seaborn and matplotlib.
     \end{subitems}
   \end{resume_subsection}
-  
+\end{resume_section}
 
 \begin{resume_section}{Education}
   \begin{resume_subsection}[Brighton (2018-Present)]{University of Sussex}
     \begin{subitems}
-      \item Computer science and AI (With a year in industry)
-      \item Achieved a first class degree in year 1.
+      \item Computer science and AI (With a year in industry).
+      \item Year 1 results graded as first class standard.
     \end{subitems}
   \end{resume_subsection}
   
-  
   \begin{resume_subsection}[Isle of Wight (2015-2018)]{Cowes Enterprise College Sixth Form}
     \begin{subitems}
-      \item A-levels in: Psychology, maths and chemistry
-      \item Results of: B, B, B
+      \item A-levels: Chemistry (B), Maths (B) and Psychology (B)
      \end{subitems}
   \end{resume_subsection}
 \end{resume_section}
 
- \begin{resume_section}{Hobbies}
-	\begin{subitems}
-	 \item Snowboarding has been a great passion of mine for a few years, it has given a way to challenge myself outside of my studies.
-	 \item Travelling to multiple places throughout the world has opened my eyes to not only new cultures but different ways of thinking.
-    \end{subitems}
-  \end{resume_subsection}
+\begin{resume_section}{Interests}
+  \begin{subitems}
+   \item Snowboarding has been a great passion of mine for a few years, it has given a way to challenge myself outside of my studies.
+   \item Travelling to multiple places throughout the world has opened my eyes to not only new cultures but different ways of thinking.
+   \end{subitems}
 \end{resume_section}
-    
-	
-
-
-\end{document}! LaTeX Error: \begin{list} on input line 129 ended by \end{document}.See the LaTeX manual or LaTeX Companion for explanation.Type H <return> for immediate help.... \end{document}
+\end{document}
