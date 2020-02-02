@@ -1,13 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[cm]{fullpage}
 \usepackage{color}
-\usepackage{hyperref}
-
-\hypersetup{breaklinks=true,%
-pagecolor=white,%
-colorlinks=true,%
-linkcolor=cyan,%
-urlcolor=MyDarkBlue}
 
 \definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
 
@@ -75,12 +68,6 @@ urlcolor=MyDarkBlue}
   \begin{tabbedsection}{0.5\secsep}
 }{\end{tabbedsection}}
 
-\newenvironment{subitems}{
-  \renewcommand{\labelitemi}{-}
-  \begin{itemize}
-      \setlength{\labelsep}{1em}
-}{\end{itemize}}
-
 \newenvironment{resume_employer}[4]{
   \vspace{\secsep}
   \textbf{#1} \\ 
@@ -88,6 +75,13 @@ urlcolor=MyDarkBlue}
   \begin{tabbedsection}{0pt}
   \begin{subitems}
 }{\end{subitems}\end{tabbedsection}}
+
+\newenvironment{subitems}{
+  \renewcommand{\labelitemi}{-}
+  \begin{itemize}
+      \setlength{\labelsep}{1em}
+}{\end{itemize}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Start Document     %
@@ -97,7 +91,7 @@ urlcolor=MyDarkBlue}
 
 \begin{resume_header}
 \name{Alex Statham}
-\contact{alex.staham1998@gmail.com  $\bullet$ +447490973388 }
+\contact{alex.staham1998@gmail.com  $\bullet$ +447490973388 $\bullet$ astatham.com}
 \end{resume_header}
 
 \begin{resume_section}{About Me}
@@ -112,13 +106,13 @@ urlcolor=MyDarkBlue}
 \end{resume_section}
 
 \begin{resume_section}{Work Experience}
-  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{}{(November 2018 - Current)}
+  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{}{November 2018 - Current}
     \item Develop robust and reliable software for multiple clients.
     \item Created custom data acquisition and  visualisations to clients to help their growth.
     \item Delivered against strict and specific guidelines against a deadline.
   \end{resume_employer}
   
-  \begin{resume_employer}{Waitrose \& Partners}{Multi-trained partner}{}{(October 2015 - May 2018)}
+  \begin{resume_employer}{Waitrose \& Partners}{Multi-trained partner}{}{October 2015 - May 2018}
     \item Demonstrated flexibility and adaptability by learning and covering multiple roles.
     \item Interacted with customers to provide high quality customer service.
     \item Worked in small teams in high pressure situations to complete tasks to a high standard.
