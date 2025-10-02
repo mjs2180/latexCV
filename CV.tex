@@ -3,7 +3,7 @@
 \usepackage{color}
 
 \definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
-
+% !TEX root = CV.tex 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Formatting parameters  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,38 +96,69 @@
 
 \begin{resume_section}{About Me}
   \begin{nospacetabbing}
-  \textbf{Interests:}  \= Machine learning,  Data acquisition, analytics and visualisation, DevOps Automation \\*
-  \textbf{Technical Skills:}  \= Python, Java, Linux, Golang, mysql, C\#,  \LaTeX\\*
+  \textbf{Interests:}  \= Machine learning, Computer vision, analytics and visualisation, DevOps Automation \\*
+  \textbf{Technical Skills:}  \= Python, Matlab, Java, Unix, Golang, FORTRAN, mysql, PostgreSQL, C++,  \LaTeX\\*
   \end{nospacetabbing}
 \end{resume_section}
 
 \begin{resume_section}{Personal Statement}
-  \textbf{Why am I seeing that Ad?} That simple question led  me to dive into the world of data analytics, machine learning and  artificial intelligence. We have more capabilities and power to determine the content people see, in real-time, than ever before. The question I was left with was how do we do it ethically and securely. I'm passionate about data, machine learning and the algorithms that only now are we able to fully realise.
+  \textbf{lorem ipsum} lorem ipsum
 \end{resume_section}
 
 \begin{resume_section}{Work Experience}
-  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{}{November 2018 - Current}
+  \begin{resume_employer}{MBDA}{Senior simulation and modelling engineer}{}{September 2024 - July 2024}
+    \item Debugged and maintained a large, legacy FORTRAN codebase, collaborating closely with other developers to resolve critical issues.
+    \item Employed effective configuration management practices to ensure software reliability, traceability and version control. Additionally, conducting and participating in structured code reviews promoting code quality and consistency.
+    \item Modelled complex systems using simulation - working directly with multiple stakeholders to gather feedback to iteratively improve the models.
+  \end{resume_employer}
+
+  \begin{resume_employer}{MBDA}{Systems engineering graduate}{}{September 2022 - September 2024}
+    \item Refactored and modernised internal Python tooling to improve usability, modularity and runtime efficiency; achieving up to 300\% performance improvements
+    \item Worked with customers to understand and validate requirements for large-scale systems.
+    \item Scoped, planned and ran performance studies. Further, creating custom data visualisation scripts for analysis and reporting. Contributing to a safety-critical decision.
+    \item Applied SysML modelling techniques to design and document software subsystems aligned with use cases and stakeholder expectations.
+    \item Designed and implemented a program to benchmark and analyse runtime performance across desktop and HPC clusters, helping to optimise parallelisation strategies, leading to an increase in efficiency of up to 150\4. 
+    \item Helped integrate and improve agile methodologies in multiple teams - primarily using JIRA.
+    \item Delivered technical presentations and demos to both engineering teams and external experts, translating complex topics into digestible information, leading to actionable decisions.
+  \end{resume_employer}
+
+  \begin{resume_employer}{Upwork}{Freelancer specialising in data science}{}{November 2018 - September 2022}
     \item Develop robust and reliable software for multiple clients.
-    \item Created custom data acquisition and  visualisations to clients to help their growth.
+    \item Created custom data acquisition and visualisations for clients to help their growth.
     \item Delivered against strict and specific guidelines against a deadline.
   \end{resume_employer}
   
-  \begin{resume_employer}{Waitrose \& Partners}{Multi-trained partner}{}{October 2015 - May 2018}
-    \item Demonstrated flexibility and adaptability by learning and covering multiple roles.
-    \item Interacted with customers to provide high quality customer service.
-    \item Worked in small teams in high pressure situations to complete tasks to a high standard.
+  \begin{resume_employer}{University of Sussex}{Teaching Assistant}{}{September 2021 - December 2021}
+    \item Presented students with presentations to aid with their learning.
+    \item Taught algorithms and data-structures to small groups using sudo-code.
+    \item Communicated with students to find where they may be struggling and aid in bettering their general understanding of the subject.
+    \item Took on feedback to better my teaching abilities and improve my communication.
+  \end{resume_employer}
+  
+\end{resume_section}
+
+\begin{resume_section}{Extracurriculars}
+  \begin{resume_employer}{Stevenage Charity Challenge}{Head of promotion and communications}{}{September 2023 - July 2024}
+    \item Supported and guided multiple charity events around the business - donating over £10,000 to charity.
+    \item Lead the promotion of charity events to increase their exposure to the widest audience possible.
+    \item Scheduled and held meetings with stakeholders throughout the business to progress charity events.
+  \end{resume_employer}
+  \begin{resume_employer}{MBDA Run Club}{Vice Captain}
+    \item Engaged with the wider work community, fostering inclusivity to runners of all abilities.
+    \item Generated and spread promotional material to grow the club.
+    \item Took proactive steps to better the club with new routes and events.
   \end{resume_employer}
 \end{resume_section}
 
 \begin{resume_section}{Competitions and Personal Projects}
   \begin{resume_subsection}[(November 2018 \& 2019)]{Hack Sussex}
     \begin{subitems}
-    \item Collaborated with Rolls Royce engineers to develop immersive features, using machine vision mapping techniques, for fibre optic vehicle technology. 
-    \item Utilised my critical thinking and problem solving skills, in a time constrained environment.
-    \item Required me to quick adapt to new hardware including Raspberry Pi's and Arduinos.
-    \item Worked in a team environment, optimsing time and asset management skills.
+    \item Collaborated with Rolls-Royce engineers to develop immersive features, using machine vision mapping techniques, for fibre optic vehicle technology. 
+    \item Utilised my critical thinking and problem-solving skills in a time-constrained environment.
+    \item Required me to quickly adapt to new hardware, including Raspberry Pi's and Arduinos.
+    \item Worked in a team environment, optimising time and asset management skills.
     \item Won an award for best use of hardware from the machine vision project.
-    \item Lead a team to create a game using Unity and C\# with unique beat detection algorithm.
+    \item Lead a team to create a game using Unity and C\# with a unique beat detection algorithm.
     \item Won the award for most atmospheric project based on the beat detection game mode using Spotify APIs.
     \end{subitems}
   \end{resume_subsection}
@@ -137,17 +168,28 @@
         \item Wrote multiple articles along with data visualisations to share my learning.
         \item Explored machine learning with Tensorflow using large datasets.
         \item Improved writing skills by continuing to update the blog.
-        \item Developed data aqusition skills for Internet source, e.g. webscraping.
+        \item Developed data acquisition skills for Internet source, e.g. webscraping.
         \item Experience of developing aesthetically pleasing visualisations in seaborn and matplotlib.
+    \end{subitems}
+  \end{resume_subsection}
+  
+  
+   \begin{resume_subsection}[(August 2021 - Current)]{Rahbot - A multi-purpose discord bot}
+    \begin{subitems}
+        \item Gained experience in PostgreSQL, Data acquisition, API usage, Git and the Discord API.
+        \item Worked with test-driven development practices to ensure pushes were without large bugs.
+        \item Experienced how to find and squash bugs in production code using logging.
+        \item Worked with an expanding project to suit the needs of the client.
     \end{subitems}
   \end{resume_subsection}
 \end{resume_section}
 
 \begin{resume_section}{Education}
-  \begin{resume_subsection}[Brighton (2018-Present)]{University of Sussex}
+  \begin{resume_subsection}[Brighton (2018-2022)]{University of Sussex}
     \begin{subitems}
-      \item Computer science and AI (With a year in industry).
-      \item Year 1 results graded as first class standard.
+      \item Computer science and AI (BSc).
+      \item Dissertation in image generation techniques. 
+      \item Coursework in modules including: NLP, Databases, Neural networks, and computer vision.
     \end{subitems}
   \end{resume_subsection}
   
@@ -160,8 +202,9 @@
 
 \begin{resume_section}{Interests}
   \begin{subitems}
-   \item Snowboarding has been a great passion of mine for a few years, it has given a way to challenge myself outside of my studies.
-   \item Travelling to multiple places throughout the world has opened my eyes to not only new cultures but different ways of thinking.
+   \item Personal fitness- Has given me a new understanding of balance in life and enabled a disconnect between work and personal time.
+   \item Video game commentating - Enabled me to meet new people and broadcast to thousands of viewers around the world and share my passion for competitive gaming. 
    \end{subitems}
 \end{resume_section}
 \end{document}
+§§
